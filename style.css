@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #212224;
+}
+
+/* rgb(31, 108, 108) */
+.nav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1rem 6.5vw;
+    z-index: 10000;
+    position: fixed;
+    gap: 2rem;
+    background-color: #1f2125;
+    box-shadow: -2px 12px 17px rgb(25, 24, 24);
+}
+
+.sign {
+    display: flex;
+}
+
+.sign button {
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem;
+    border: 2px solid rgb(93, 92, 92);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sign button:hover{
+    box-shadow:2px 2px 2px #087b84;
+}
+
+.nav h1 {
+    font-size: 2rem;
+    background: -webkit-linear-gradient(crimson, rgb(246, 128, 128), #4285f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vmin;
+}
+
+i {
+    display: none;
+}
+
+.item li {
+    list-style: none;
+    padding-right: 2rem;
+}
+
+.item li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 0;
+    height: 2px;
+    background-color: crimson;
+    transition: 0.3s ease-out;
+}
+
+a:hover::after {
+    width: 70%;
+}
+
+a:hover {
+    border-bottom: 2px solid #dfe3ea;
+}
+
+.backgnd {
+    width: 50%;
+    height: 1vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mid {
+    height: 110%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.para {
+    color: white;
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    transform: translate(0 -50%);
+}
+
+.para h1 {
+    font-size: 3rem;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke-width: 2px;
+    color: white;
+    -webkit-text-stroke-color: rgb(252, 250, 250);
+    text-transform: uppercase;
+    word-spacing: 0.7rem;
+    margin-bottom: 1rem;
+    text-shadow:2px 5px 5px #087b84;
+}
+
+.para span {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-text-stroke-color: #f7f7f8;
+    letter-spacing: 0.1rem;
+    text-shadow: none;
+    margin-top: 2rem;
+    /* background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%); */
+
+}
+
+#span {
+    color: #e78c0ee6;
+    font-size: 1.2rem;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 0.3rem;
+    font-family: cursive;
+    font-size: 1.1rem;
+    color: #dbe7e8;
+}
+
+.get-started {
+    margin-top: 2rem;
+    width: 8rem;
+    height: 3rem;
+    border: 2px solid white;
+    box-shadow: -2px 10px 10px #060606;
+    background-color: #1f2125;
+    color: #45f3ff;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+.get-started:hover {
+    background-color: rgb(43, 124, 216);
+    color: black;
+    border: none;
+}
+
+.image {
+    max-width: 500px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    background-size: cover;
+}
+
+@media (max-width:760px) {
+
+    .para h1 {
+        font-size: 8vmin;
+    }
+
+    i {
+        display: block;
+        font-size: 1.8rem;
+    }
+    .item{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        background-color: rgba(13, 12, 12, 0.7) ;
+        width: 30%;
+        height: 100vh;
+        padding: 2rem;
+        justify-content: center;
+        right: -35%;
+        transition: ease 0.4s;
+        
+    }
+    .item.active{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        background-color:rgba(13, 12, 12, 0.7);
+        width: 30%;
+        padding: 2rem;
+        justify-content: center;
+    }
+    .nav {
+        gap: 0.3rem;
+    }
+    .image{
+        position: absolute;
+        top: 85%;
+    } 
+}
